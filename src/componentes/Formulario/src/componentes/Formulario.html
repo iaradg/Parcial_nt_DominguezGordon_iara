@@ -14,8 +14,8 @@
         <field-messages name="nombre" show="$dirty">
           <div slot="required" class="alert alert-danger mt-1">Este campo es obligatorio</div>
           <div slot="sin-espacios" class="alert alert-danger mt-1">No se permiten espacios intermedios en este campo.</div>
-          <div slot="minlength" class="alert alert-danger mt-1"> Este campo debe poseer al menos {{ nombreMinLength }} caracteres </div>
-          <div v-if="formData.nombre.length == maxLength" class="alert alert-danger mt-1"> Este campo debe poseer como máximo {{ nombreMaxLength }} caracteres </div>
+          <div slot="minlength" class="alert alert-danger mt-1"> Este campo debe poseer al menos {{ textMinLength }} caracteres </div>
+          <div v-if="formData.nombre.length == maxLength" class="alert alert-danger mt-1"> Este campo debe poseer como máximo {{ textMaxLength }} caracteres </div>
         </field-messages>
       </validate>
       <br>
@@ -29,8 +29,8 @@
         <field-messages name="apellido" show="$dirty">
           <div slot="required" class="alert alert-danger mt-1">Este campo es obligatorio</div>
           <div slot="sin-espacios" class="alert alert-danger mt-1">No se permiten espacios intermedios en este campo.</div>
-          <div slot="minlength" class="alert alert-danger mt-1"> Este campo debe poseer al menos {{ minLength }} caracteres </div>
-          <div v-if="formData.apellido.length == maxLength" class="alert alert-danger mt-1"> Este campo debe poseer como máximo {{ maxLength }} caracteres </div>
+          <div slot="minlength" class="alert alert-danger mt-1"> Este campo debe poseer al menos {{ textMinLength }} caracteres </div>
+          <div v-if="formData.apellido.length == maxLength" class="alert alert-danger mt-1"> Este campo debe poseer como máximo {{ textMaxLength }} caracteres </div>
         </field-messages>
       </validate>
       <br>
@@ -42,6 +42,8 @@
   
         <field-messages name="nota" show="$dirty">
           <div slot="required" class="alert alert-danger mt-1">Este campo es obligatorio</div>
+          <div slot="minNota" class="alert alert-danger mt-1">La nota no puede ser menor a {{notaMinLength}}</div>
+          <div slot="maxNota" class="alert alert-danger mt-1">La nota no puede ser mayor a {{notaMaxLength}}</div>
         </field-messages>
       </validate>
 
