@@ -30,7 +30,7 @@
           <div slot="required" class="alert alert-danger mt-1">Este campo es obligatorio</div>
           <div slot="sin-espacios" class="alert alert-danger mt-1">No se permiten espacios intermedios en este campo.</div>
           <div slot="minlength" class="alert alert-danger mt-1"> Este campo debe poseer al menos {{ textMinLength }} caracteres </div>
-          <div v-if="formData.apellido.length == maxLength" class="alert alert-danger mt-1"> Este campo debe poseer como máximo {{ textMaxLength }} caracteres </div>
+          <div v-if="maxLength" class="alert alert-danger mt-1"> Este campo debe poseer como máximo {{ textMaxLength }} caracteres </div>
         </field-messages>
       </validate>
       <br>
